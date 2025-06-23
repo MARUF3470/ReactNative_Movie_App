@@ -5,7 +5,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 
 const MovieCard = ({ item }: { item: Movie }) => {
   return (
-    <Link href={`/movies/${item.id}`} asChild>
+    <Link href={`/movies/${item?.id}`} asChild>
       <TouchableOpacity className="w-[30%]">
         <Image
           source={{
@@ -22,7 +22,7 @@ const MovieCard = ({ item }: { item: Movie }) => {
         <View className="flex-row items-center justify-start gap-x-1">
           <Image source={icons.star} className="size-4" />
           <Text className="text-xs font-bold uppercase text-white">
-            {Math.round(item.vote_average / 2)}
+            {Math.round(item?.vote_average / 2)}
           </Text>
         </View>
         <View className="flex-row items-center justify-between mt-1">
